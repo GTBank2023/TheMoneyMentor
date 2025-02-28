@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #dc4405;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #dc4405;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.resource-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 20px;
+    overflow-x: auto; /* allows horizontal scroll on smaller screens */
+}
+
+.resource-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;  
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 23%; /* ensures 4 boxes fit in one row */
+}
+
+.resource-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resource-box i {
+    color: #dc4405; /* Updated color for icons */
+    margin-bottom: 10px;
+}
+
+.resource-button {
+    background-color: #dc4405;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.resource-button:hover {
+    background-color: #b93600;
+}
+
+@media (max-width: 768px) {
+    .resource-box {
+        flex: 0 0 90%; /* allows boxes to stack on smaller screens */
+    }
+}
