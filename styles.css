@@ -43,24 +43,22 @@ footer {
     bottom: 0;
 }
 
+/* Grid layout for resources */
 .resource-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+    gap: 20px;
     padding: 20px;
-    overflow-x: auto; /* allows horizontal scroll on smaller screens */
 }
 
 .resource-box {
     background-color: white;
     border: 1px solid #ddd;
     padding: 20px;
-    margin: 20px;
     border-radius: 10px;  
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 0 0 23%; /* ensures 4 boxes fit in one row */
 }
 
 .resource-box:hover {
@@ -88,8 +86,9 @@ footer {
     background-color: #b93600;
 }
 
+/* Mobile responsiveness for grid */
 @media (max-width: 768px) {
-    .resource-box {
-        flex: 0 0 90%; /* allows boxes to stack on smaller screens */
+    .resource-container {
+        grid-template-columns: 1fr; /* stack all items vertically */
     }
 }
